@@ -7,4 +7,5 @@ link = 'https://clients.gorealytics.com/'
 browser = webdriver.Chrome()
 browser.get(link)
 
+
 browser.quit()
