@@ -6,6 +6,6 @@ from selenium.webdriver.common.by import By
 link = 'https://clients.gorealytics.com/'
 browser = webdriver.Chrome()
 browser.get(link)
-
+///iuib///
 
 browser.quit()
