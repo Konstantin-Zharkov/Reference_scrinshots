@@ -24,5 +24,7 @@ class dashboard_select:
     dash = browser.find_element(By.XPATH, '//*[@id="app"]/div/div[2]/div[2]/div/div/div/table/tbody/tr[6]/td[1]').click()
     sleep(5)
 
-browser.get_screenshot_as_png()
+
+browser.screenshot("screenshot_full.png")
+
 browser.close()
