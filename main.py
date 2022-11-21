@@ -18,8 +18,7 @@ class autorisation:
 
     send_password = browser.find_element(By.XPATH,'/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div/div[1]/div/div/button').click()
 
+class dashboard_select:
+    dash = browser.find_element(By.XPATH, '//*[@id="app"]/div/div[2]/div[2]/div/div/div/table/tbody/tr[6]/td[1]').click()
 
-
-
-#html.send_keys(Keys.ENTER)
 browser.close()
