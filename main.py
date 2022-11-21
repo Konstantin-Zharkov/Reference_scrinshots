@@ -6,6 +6,7 @@ from time import sleep
 
 browser = webdriver.Chrome()
 browser.get('https://clients.gorealytics.com/')
+browser.maximize_window()
 
 
 class autorisation:
@@ -15,10 +16,13 @@ class autorisation:
     button_send_mail = browser.find_element(By.XPATH, '/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div/div[1]/div/div/button').click()
     sleep(1)
     password = browser.find_element(By.XPATH, '//*[@id="password"]/div[1]/div/div[1]/input').send_keys('93tuy457')
-
     send_password = browser.find_element(By.XPATH,'/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div/div[1]/div/div/button').click()
+    sleep(30)
 
 class dashboard_select:
+
     dash = browser.find_element(By.XPATH, '//*[@id="app"]/div/div[2]/div[2]/div/div/div/table/tbody/tr[6]/td[1]').click()
+    sleep(5)
+
 
 browser.close()
