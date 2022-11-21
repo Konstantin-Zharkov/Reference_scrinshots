@@ -6,7 +6,7 @@ from time import sleep
 
 browser = webdriver.Chrome()
 browser.get('https://clients.gorealytics.com/')
-browser.maximize_window()
+browser.set_window_size(1280, 5000)
 
 
 class autorisation:
@@ -24,5 +24,5 @@ class dashboard_select:
     dash = browser.find_element(By.XPATH, '//*[@id="app"]/div/div[2]/div[2]/div/div/div/table/tbody/tr[6]/td[1]').click()
     sleep(5)
 
-
+browser.get_screenshot_as_png()
 browser.close()
