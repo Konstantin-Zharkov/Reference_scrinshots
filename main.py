@@ -1,19 +1,22 @@
+import time
 
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 from time import sleep
 import os
-from discord.ext import tasks
-
+from PIL import Image, ImageChops
+import pathlib
 
 browser = webdriver.Chrome()
 browser.get('https://clients.gorealytics.com/')
-browser.set_window_size(1280, 1100)
+# browser.set_window_size(1280, 1100)
 sleep(5)
+
 
 class Folders:
     os.mkdir('Screens')
     os.mkdir('Difference')
+# path_scr =
 
 class Authorization:
 
@@ -52,9 +55,11 @@ class Screens:
     Reviews_scr = browser.save_screenshot('Reviews_ref.png')
 
 
-@tasks.loop(minutes=15.0)
-async def my_task():
-    def make_new_screens():
+# @tasks.loop(minutes=15.0)
+class Comparison:
+    def make_new_screens(self):
+
+        Leaderboard = browser.find_element(By.XPATH, '//*[@id="app"]/div/div[1]/div/ul/li[2]/a/span[2]').click()
         Leaderboard_scr = browser.save_screenshot("Leaderboard_new.png")
         Overview_report = browser.find_element(By.XPATH, '//*[@id="app"]/div/div[1]/div/ul/li[3]/a/span[2]').click()
         sleep(5)
@@ -72,6 +77,24 @@ async def my_task():
         sleep(10)
         Reviews_scr = browser.save_screenshot('Reviews_new.png')
     make_new_screens()
+    #
+    # def compare_scr(self):
+    #     image_1 = Image.open('Leaderboard_ref.png')
+    #     image_2 = Image.open('Leaderboard_new')
+    #
+    #     result = ImageChops.difference(image_1, image_2)
+    #     result.show()
+    #
+    # time.sleep(900)
+    #
+    #
+    # class Difference:
+    #     image_1 = Image.open('Leaderboard_ref.png')
+    #     image_2 = Image.open('Leaderboard_new')
+    #
+    #     result = ImageChops.difference(image_1, image_2)
+    #     result.show()
+
 
 
 
