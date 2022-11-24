@@ -1,5 +1,4 @@
 import time
-
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 from time import sleep
@@ -9,7 +8,7 @@ import pathlib
 
 browser = webdriver.Chrome()
 browser.get('https://clients.gorealytics.com/')
-# browser.set_window_size(1280, 1100)
+browser.set_window_size(1280, 1100)
 sleep(5)
 
 
@@ -17,6 +16,7 @@ class Folders:
     os.mkdir('Screens')
     os.mkdir('Difference')
 # path_scr =
+
 
 class Authorization:
 
@@ -98,3 +98,4 @@ class Comparison:
 
 browser.close()
 browser.quit()
+
