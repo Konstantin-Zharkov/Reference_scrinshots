@@ -57,36 +57,33 @@ class Screens:
 
 # @tasks.loop(minutes=15.0)
 class Comparison:
-    def make_new_screens(self):
 
-        Leaderboard = browser.find_element(By.XPATH, '//*[@id="app"]/div/div[1]/div/ul/li[2]/a/span[2]').click()
-        Leaderboard_scr = browser.save_screenshot("Leaderboard_new.png")
-        Overview_report = browser.find_element(By.XPATH, '//*[@id="app"]/div/div[1]/div/ul/li[3]/a/span[2]').click()
-        sleep(5)
-        Overview_report_scr = browser.save_screenshot('Overview_report_new.png', )
-        Attribute_analysis = browser.find_element(By.XPATH, '//*[@id="app"]/div/div[1]/div/ul/li[4]/a/span[2]').click()
-        sleep(5)
-        Attribute_analysis_scr = browser.save_screenshot('Attribute_analysis_new.png')
-        CSAT_analysis = browser.find_element(By.XPATH, '//*[@id="app"]/div/div[1]/div/ul/li[5]/a/span[2]').click()
-        sleep(5)
-        CSAT_analysis_scr = browser.save_screenshot('CSAT_analysis_new.png')
-        Brands_VS_Competitors = browser.find_element(By.XPATH, '//*[@id="app"]/div/div[1]/div/ul/li[6]/a/span[2]').click()
-        sleep(5)
-        Brands_VS_Competitors_scr = browser.save_screenshot('Brands_VS_Competitors_new.png')
-        Reviews = browser.find_element(By.XPATH, '//*[@id="app"]/div/div[1]/div/ul/li[7]/a/span[2]').click()
-        sleep(10)
-        Reviews_scr = browser.save_screenshot('Reviews_new.png')
-    make_new_screens()
+    Leaderboard = browser.find_element(By.XPATH, '//*[@id="app"]/div/div[1]/div/ul/li[2]/a/span[2]').click()
+    Leaderboard_scr = browser.save_screenshot("Leaderboard_new.png")
+    Overview_report = browser.find_element(By.XPATH, '//*[@id="app"]/div/div[1]/div/ul/li[3]/a/span[2]').click()
+    sleep(5)
+    Overview_report_scr = browser.save_screenshot('Overview_report_new.png', )
+    Attribute_analysis = browser.find_element(By.XPATH, '//*[@id="app"]/div/div[1]/div/ul/li[4]/a/span[2]').click()
+    sleep(5)
+    Attribute_analysis_scr = browser.save_screenshot('Attribute_analysis_new.png')
+    CSAT_analysis = browser.find_element(By.XPATH, '//*[@id="app"]/div/div[1]/div/ul/li[5]/a/span[2]').click()
+    sleep(5)
+    CSAT_analysis_scr = browser.save_screenshot('CSAT_analysis_new.png')
+    Brands_VS_Competitors = browser.find_element(By.XPATH, '//*[@id="app"]/div/div[1]/div/ul/li[6]/a/span[2]').click()
+    sleep(5)
+    Brands_VS_Competitors_scr = browser.save_screenshot('Brands_VS_Competitors_new.png')
+    Reviews = browser.find_element(By.XPATH, '//*[@id="app"]/div/div[1]/div/ul/li[7]/a/span[2]').click()
+    sleep(10)
+    Reviews_scr = browser.save_screenshot('Reviews_new.png')
+
     #
     # def compare_scr(self):
     #     image_1 = Image.open('Leaderboard_ref.png')
-    #     image_2 = Image.open('Leaderboard_new')
+    #     image_2 = Image.open('Leaderboard_new.png')
     #
     #     result = ImageChops.difference(image_1, image_2)
     #     result.show()
-    #
-    # time.sleep(900)
-    #
+
     #
     # class Difference:
     #     image_1 = Image.open('Leaderboard_ref.png')
